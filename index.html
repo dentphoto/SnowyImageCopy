@@ -6,52 +6,53 @@
 <style type="text/css">
 <!--
 /* body */
-body {font-family: Segoe UI, Meiryo; line-height: 1.4em; background: rgb(234,234,234); padding: 0; margin: 0;}
+body {margin: 0; padding: 0; font-family: Segoe UI, Meiryo; line-height: 1.4em; background: white;}
 
-h1,h2,h3,p {font-weight: normal; padding: 0; margin: 0;}
+div#wrapper {margin: 0 auto; min-width: 640px; max-width: 920px;}
+
+h1,h2,h3,p {margin: 0; padding: 0; font-weight: normal;}
 
 p,li {font-size: 0.92em;}
 
-div#wrapper {margin: 0 auto; min-width: 640px; max-width: 840px; box-shadow: 0 0 8px rgb(144,144,144);}
-
 /* title */
-div#title {background: white; height: 70px; position: relative;}
+div#title {height: 4.4em; position: relative;}
 
-h1 {font-size: 46px; line-height: 46px; margin-top: -24px; position: absolute; top: 50%; left: 20px; color: #00a1e0;}
-p#language {font-size: 16px; line-height: 16px; position: absolute; top: 0; right: 10px;}
-p#version {font-size: 16px; line-height: 16px; position: absolute; bottom: 24px; right: 10px;}
-p#date {font-size: 16px; line-height: 16px; position: absolute; bottom: 6px; right: 10px;}
+h1 {position: absolute; top: 50%; left: 0.44em; margin-top: -1.44em; font-size: 2.86em; line-height: 2.86em; color: #00a1e0;}
+
+div#navigation {position: absolute; top: 0.4em; right: 0.6em;}
+div#navigation p {margin: 0; text-align: right;}
+div#navigation a {margin: 0.2em 0; padding: 0 0.3em; font-size: 0.92em; text-decoration: none;}
 
 /* main */
-div#main {background: white; padding: 8px 20px 10px 30px; margin: 0; clear: both;}
+div#main {margin: 0; padding: 0.4em 1.2em 0.8em 1.9em; clear: both;}
 
-h2 {font-size: 1.4em; line-height: 1.4em; margin: 20px 0 6px -12px; padding: 0 0 0 12px; border-style: solid; border-width: 0 0 1px 0; border-color: #a2d9ef; color: navy;}
-h3 {font-size: 1.2em; font-weight: normal; margin: 14px 0 0 -10px; color: #222222;}
-p {margin:10px 0 0 0;}
-
-p.note,
-div.note {font-size: 1em; line-height: 1.3em; margin: 0.4em 0 0 2em;}
-span.note-head {font-weight: bold; color: rgb(70,70,70);}
+h2 {margin: 0.8em 0 0.4em -0.6em; padding: 0 0 0 0.6em; border-color: #a2d9ef; border-width: 0 0 thin 0; border-style: solid; font-size: 1.4em; line-height: 1.4em; color: navy;}
+h3 {margin-top: 0.7em; font-size: 1.2em; font-weight: normal; color: navy;}
+p {margin-top: 0.7em;}
 
 ul,ol {margin: 0.6em 0 0 1.6em; padding: 0;}
 li {margin: 0 0 0.4em 0}
 
 em {font-style: normal; font-weight: bold;}
 
-div.tooltipHeader {position: relative;}
-div.tooltipHeader > div.tooltipBody {display: none;}
-div.tooltipHeader:hover > div.tooltipBody {position: absolute; display: block; line-height: 1em; color: white; background: rgba(0,0,0,0.6); padding: 4px 8px 8px 8px;}
+table {font-size: 0.92em; line-height: 1.25em; margin: 0.6em 0.5em;}
+table,th,td {border-collapse: collapse; border: thin darkgray solid;}
+th,td {padding: 0.5em;}
+td.head {white-space: nowrap; color: navy; background: rgb(208,236,247);}
 
 a:link,
 a:visited {color: black; background: rgb(248,248,248);}
 a:hover,
 a:active {color: black; background: rgb(194,224,255);}
 
-a.download {display:block; color: navy; background: rgb(162,217,239); text-decoration: none; text-align: center; margin: 8px 8px 22px 0; padding: 6px;}
+div.tooltip {position: relative; margin: 0 auto; font-size: 0.8em;}
+div.tooltip p {margin: 0; color: darkgray;}
+div.tooltip > div.tooltipContent {display: none;}
+div.tooltip:hover > div.tooltipContent {display: block; position: absolute; padding: 0.2em 0.8em 0.8em 0.8em; line-height: 1em; text-align: left; color: white; background: rgba(0,0,0,0.6);}
 
-/* footnote */
-div#footnote {background: rgb(248,248,248); height: 28px; padding: 6px 10px; margin: 0; border-top: rgb(120,120,120) solid 1px; position: relative;}
-p#sig {font-size: 16px; line-height: 16px; position: absolute; top: 0; right: 10px;}
+div.download {display: flex; align-items: center;}
+div.download a {display:block; padding: 0.3em 1em; text-decoration: none; color: navy; background: rgb(162,217,239);}
+div.download p {margin-top: 0; margin-left: 0.7em;}
 -->
 </style>
 </head>
@@ -61,7 +62,11 @@ p#sig {font-size: 16px; line-height: 16px; position: absolute; top: 0; right: 10
 
 <div id="title">
 <h1>Snowy</h1>
-<p id="language"><a href="http://emoacht.github.io/SnowyImageCopy/index_jp.html">Japanese</a></p>
+
+<div id="navigation">
+<p><a href="http://emoacht.github.io/SnowyImageCopy/index_jp.html">Japanese</a></p>
+<p><a href="https://github.com/emoacht/SnowyImageCopy">Repository</a></p>
+</div>
 </div><!-- end of title -->
 
 <div id="main">
@@ -69,20 +74,20 @@ p#sig {font-size: 16px; line-height: 16px; position: absolute; top: 0; right: 10
 <p>Snowy is a Windows desktop app to copy images from FlashAir by a wireless connection. You can copy images in bulk or select from thumbnails one by one. Also you can make this app check new images automatically at a regular interval.</p>
 
 <div style="text-align: center;">
-<img src="images/snowy-en-01.png" style="width:780px; height: 640px; margin-top: 14px; vertical-align: bottom;" alt="Screenshot"/>
+<img src="images/snowy-en-01.png" style="width: 780px; height: 640px; margin-top: 14px; vertical-align: bottom;" alt="Screenshot"/>
 
-<div class="tooltipHeader" style="font-size: 0.8em; width: 370px; margin: 0 auto;">
-<p style="color: darkgray; margin: 0;">About Figures</p>
-<div class="tooltipBody" style="text-align: left; width: 370px;">
+<div class="tooltip" style="width: 370px;">
+<p>About figures</p>
+<div class="tooltipContent" style="width: 370px;">
 <ul>
-	<li>TAIL-SLAP : 月読鎖々美 いなばのしろうさぎ Ver</li>
-	<li>はこむす : 僕の前に人は居ない僕の後ろに君は居る (常月まとい)</li>
-	<li>林檎連盟 : 初音ミク サマーメモリー</li>
-	<li>ReplyFrom : トラコッティと虎神さま</li>
-	<li>柳生敏之 : 初音ミク</li>
+  <li>TAIL-SLAP : 月読鎖々美 いなばのしろうさぎ Ver</li>
+  <li>はこむす : 僕の前に人は居ない僕の後ろに君は居る (常月まとい)</li>
+  <li>林檎連盟 : 初音ミク サマーメモリー</li>
+  <li>ReplyFrom : トラコッティと虎神さま</li>
+  <li>柳生敏之 : 初音ミク</li>
 </ul>
 </div>
-</div>
+</div><!-- end of tooltip -->
 
 <img src="images/snowy-en-02.png" style="width: 760px; height: 720px; margin-top: 6px; vertical-align: bottom;" alt="Screenshot"/>
 </div>
@@ -90,16 +95,17 @@ p#sig {font-size: 16px; line-height: 16px; position: absolute; top: 0; right: 10
 <h2>Requirements</h2>
 
 <ul>
-	<li>Windows 7 or newer</li>
-	<li>.NET Framework 4.5.2</li>
+  <li>Windows 7 or newer</li>
+  <li>.NET Framework 4.5.2</li>
 </ul>
-<p>Tested on Windows 10 64bit with SD-WB008G, SD-WC016G (W-02), SD-WE016G (W-03) and SD-UWA032G (W-04).</p>
+<p>Tested on Windows 10 with SD-WB008G, SD-WC016G (W-02), SD-WE016G (W-03) and SD-UWA032G (W-04).</p>
 
 <h2>Download</h2>
 
-<a class="download" style="float: left; width: 100px;" href="https://github.com/emoacht/SnowyImageCopy/releases/download/1.8.0/Snowy180.zip">Download</a>
-<p style="margin-top: 20px;">Ver 1.8.0 2020-3-8</p>
-<div style="clear: both;"/>
+<div class="download">
+<a href="https://github.com/emoacht/SnowyImageCopy/releases/download/1.8.0/Snowy180.zip">Download</a>
+<p>Ver 1.8.0 2020-3-8</p>
+</div><!-- end of download -->
 
 <h2>Install</h2>
 
@@ -110,13 +116,33 @@ p#sig {font-size: 16px; line-height: 16px; position: absolute; top: 0; right: 10
 <h2>Remarks</h2>
 
 <ol>
-	<li>Before using this app, a wireless connection to FlashAir must be established. In addition, <u>other network connections (regardless of wireless or wired) must be disabled temporarily</u> because by default (Access Point mode), FlashAir needs to become virtually the sole access point. To use other network connections simultaneously, FlashAir has to be switched to <a href="https://flashair-developers.com/en/documents/tutorials/advanced/1/">Station mode</a> or <a href="https://flashair-developers.com/en/documents/tutorials/advanced/3/">Internet Pass-Thru mode</a>.</li>
-	<li>The thumbnail of an image not copied to PC yet is shown only for image of JPEG format.</li>
-	<li>A RAW image can be copied as well. After copied to PC, if its image format is supported by Microsoft Camera Codec Pack, it will be shown in the thumbnail and in current image.</li>
-	<li>If you habitually delete images in FlashAir after copied to PC, it will be safer not to use "Move to Recycle if image in FlashAir is deleted" function.</li>
-	<li>A color profile of monitor will be reflected to current image only.</li>
-	<li>When "Not select once copied image on check" is on, the maximum number of images to be recorded as copied will be shown in the textbox. You can change this number by clicking the texbox in the range of 10,000 to 100,000.</li>
+  <li>Before using this app, a wireless connection to FlashAir must be established. In addition, <u>other network connections (regardless of wireless or wired) must be disabled temporarily</u> because by default (Access Point mode), FlashAir needs to become virtually the sole access point. To use other network connections simultaneously, FlashAir has to be switched to Station mode or Internet Pass-Thru mode.</li>
+  <li>The thumbnail of an image not copied to PC yet is shown only when it is a JPEG image.</li>
+  <li>A RAW image can be copied as well. After copied to PC, if its image format is supported by Microsoft Camera Codec Pack, it will be shown in the thumbnail and in current image.</li>
+  <li>A color profile of a monitor will be reflected to current image only.</li>
+  <li>When "Customize folder name for each date" is on, the string for date format will be shown in the textbox. You can make some changes such as inserting "-" or "_" between year, month and date (e.g. yyyy-MM-dd).</li>
+  <li>When "Not select once copied image on check" is on, the maximum number of images to be recorded as copied will be shown in the textbox. You can change this number by clicking the texbox ranging from 10,000 to 100,000.</li>
+  <li>If you usually delete images in FlashAir after copied to PC, it is recommended not to use "Move to Recycle Bin if image in FlashAir is deleted" function.</li>
 </ol>
+
+<h2>Command Line</h2>
+
+<p>When starting from command line, the following options are available.</p>
+
+<table><tbody>
+  <tr>
+    <td class="head">/autocheck</td>
+    <td>Start auto check at startup.</td>
+  </tr>
+  <tr>
+    <td class="head">/minimized</td>
+    <td>Make window state minimized at startup.</td>
+  </tr>
+  <tr>
+    <td class="head">/recordlog</td>
+    <td>Record download log from FlashAir. Log file will be saved at the same folder as settings file.</td>
+  </tr>
+</tbody></table>
 
 <h2>About Feather</h2>
 
@@ -125,15 +151,22 @@ p#sig {font-size: 16px; line-height: 16px; position: absolute; top: 0; right: 10
 <h2>License</h2>
 
 <ul>
-	<li>MIT License</li>
+  <li>MIT License</li>
 </ul>
 
-<h2>Other</h2>
+<h2>Libraries</h2>
 
 <ul>
-	<li>Libraries: <a href="https://github.com/dotnet/reactive">Reactive Extensions</a>, <a href="https://github.com/microsoft/XamlBehaviorsWpf">XamlBehaviors for WPF</a>, <a href="https://github.com/emoacht/WpfMonitorAware">WPF Monitor Aware Window</a>, <a href="https://github.com/emoacht/DesktopToast">Desktop Toast</a></li>
-	<li>Repository: <a href="http://github.com/emoacht/SnowyImageCopy">emoacht/SnowyImageCopy</a></li>
-	<li>Developer: emoacht (emotom[atmark]pobox.com)</li>
+  <li><a href="https://github.com/dotnet/reactive">Reactive Extensions</a></li>
+  <li><a href="https://github.com/microsoft/XamlBehaviorsWpf">XAML Behaviors for WPF</a></li>
+  <li><a href="https://github.com/emoacht/WpfMonitorAware">WPF Monitor Aware Window</a></li>
+  <li><a href="https://github.com/emoacht/DesktopToast">Desktop Toast</a></li>
+</ul>
+
+<h2>Developer</h2>
+
+<ul>
+  <li>emoacht (emotom[atmark]pobox.com)</li>
 </ul>
 
 </div><!-- end of main -->
